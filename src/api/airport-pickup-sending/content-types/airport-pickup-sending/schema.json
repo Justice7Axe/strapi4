@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "airport_pickup_sendings",
+  "info": {
+    "singularName": "airport-pickup-sending",
+    "pluralName": "airport-pickup-sendings",
+    "displayName": "Airport Pickup Sending"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "startname": {
+      "type": "string",
+      "required": true
+    },
+    "endname": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "integer"
+    },
+    "seat": {
+      "type": "integer"
+    },
+    "car_type": {
+      "type": "string"
+    }
+  }
+}
