@@ -4,7 +4,8 @@
   "info": {
     "singularName": "airport-pickup-sending",
     "pluralName": "airport-pickup-sendings",
-    "displayName": "Airport Pickup Sending"
+    "displayName": "Airport Pickup Sending",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -27,6 +28,12 @@
     },
     "car_type": {
       "type": "string"
+    },
+    "endaddress": {
+      "type": "string"
+    },
+    "caroption": {
+      "type": "json"
     }
   }
 }
