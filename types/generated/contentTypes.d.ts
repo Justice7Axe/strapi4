@@ -382,6 +382,10 @@ export interface ApiAirportPickupSendingAirportPickupSending
     car_type: Attribute.String;
     endaddress: Attribute.String;
     caroption: Attribute.JSON;
+    price_low: Attribute.Integer;
+    price_high: Attribute.Integer;
+    start_address: Attribute.String;
+    airport_iata_code: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -393,6 +397,41 @@ export interface ApiAirportPickupSendingAirportPickupSending
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::airport-pickup-sending.airport-pickup-sending',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTripTodayProductTripTodayProduct
+  extends Schema.CollectionType {
+  collectionName: 'trip_today_products';
+  info: {
+    singularName: 'trip-today-product';
+    pluralName: 'trip-today-products';
+    displayName: 'Trip Today Product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    product_name: Attribute.String & Attribute.Required;
+    product_image: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::trip-today-product.trip-today-product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::trip-today-product.trip-today-product',
       'oneToOne',
       'admin::user'
     > &
@@ -837,6 +876,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::airport-pickup-sending.airport-pickup-sending': ApiAirportPickupSendingAirportPickupSending;
+      'api::trip-today-product.trip-today-product': ApiTripTodayProductTripTodayProduct;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;

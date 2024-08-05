@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trip_today_products",
+  "info": {
+    "singularName": "trip-today-product",
+    "pluralName": "trip-today-products",
+    "displayName": "Trip Today Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product_name": {
+      "type": "string",
+      "required": true
+    },
+    "product_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

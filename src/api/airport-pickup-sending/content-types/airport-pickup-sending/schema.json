@@ -34,6 +34,18 @@
     },
     "caroption": {
       "type": "json"
+    },
+    "price_low": {
+      "type": "integer"
+    },
+    "price_high": {
+      "type": "integer"
+    },
+    "start_address": {
+      "type": "string"
+    },
+    "airport_iata_code": {
+      "type": "string"
     }
   }
 }
