@@ -386,6 +386,7 @@ export interface ApiAirportPickupSendingAirportPickupSending
     price_high: Attribute.Integer;
     start_address: Attribute.String;
     airport_iata_code: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
